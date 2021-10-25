@@ -1,12 +1,23 @@
-<!DOCTYPE html>
-<html lang="pl"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!Doctype html>
+<html>
+<head>
 <meta charset="utf-8">
+<style>
+    p {
+        border:solid green;
+        background-color: lightpink;
+    }
+</style>
 </head>
 <body>
-<button style="position: absolute;" onmouseover="this.style.left=''+(Math.random()*100)+'%';">Kliknij</button>
-<button style="position: absolute; color:green;" onmouseover="this.style.top=''+(Math.random()*100)+'%';">Kliknij</button>
-<button style="position: absolute; color:red;" onmouseover="this.style.left=''+(Math.random()*100)+'%';this.style.top=''+(Math.random()*100)+'%';">Kliknij</button>
-<p></p>
-
-</body></html>
+<p id="paragraf" onclick="wypisz()">Jeszcze nie kliknięty</p>
+<script>
+    x=1;
+    function wypisz()
+    {
+        document.getElementsById('paragraf').innerHTML="Kliknięto poraz "+"x";
+        x++;
+    }
+</script>
+</body>
+</html>

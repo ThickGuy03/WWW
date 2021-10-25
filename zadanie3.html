@@ -1,44 +1,48 @@
-<!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <meta charset="utf-8">
-        <style>
-            div
-            {
-                position:absolute;
-                float:left;
-                width:40px;
-                height:40px;
-                background-color: aqua;
-            }
-            div:nth-of-type(2)
-            {
-                position:relative;
-                float:right;
-                width:40px;
-                height:40px;
-                background-color: blueviolet;
-            }
-            div:nth-of-type(3)
-            {
-                position:absolute;
-               top:99%;
-                left:97.5%;
-                width:40px;
-                height:40px;
-                background-color: rgb(223, 186, 37);
-            }
-            div:nth-of-type(4)
-            {
-                position:absolute;
-                top:99%;
-                width:40px;
-                height:40px;
-                background-color: darkgoldenrod;
-            }
-        </style>
-    </head>
-    <body>
-    <div></div><div></div><div></div><div></div>
-    </body>
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    div{
+        border:solid black;
+        padding:5px;
+        background-color: grey;
+    }
+</style>
+</head>
+<body>
+    n=<input name="n" value=55 type="number">
+    <button onclick="witaj()"> Witaj</button>
+    <button onclick="liczby100()"> 1 .. 100</button>
+    <button onclick="liczbyN()"> 1 .. n</button>
+    
+    <div id=’ramka’></div>
+    <script>
+        let ramka=document.getElementById("ramka").innerHTML;
+        function witaj()
+        {
+            ramka="Dzień Dobry";
+        }
+        function liczby100()
+        {
+
+        }
+        function liczbyN()
+        {
+
+        }
+        function wieloN()
+        {
+
+        }
+        function ukryj()
+        {
+
+        }
+        function pokaz()
+        {
+
+        }
+    </script>
+</body>
 </html>
