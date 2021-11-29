@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<style>
+.menu1 a {font-size: 20px}
+.menu1 a {text-decoration:none;}
+.menu1 a {font-family: arial;display:block;background:#eee;
+	       padding:4px 20px;margin:2px;}
+.menu1 li li a {color:black}
+.menu1  li:hover> a {background:#aaa;}
+.menu1 > li {display:table-cell; padding:0; border:1px solid grey}
+.menu1 >li >a {background:#678; color:white;margin:2px;}
+.menu1 >li:hover >a {background:#456; }
+.menu1 ul {list-style-type:none} 
+.menu1 ul {padding:0} 
+.menu1 li ul {position:absolute;border:1px solid grey;background:#eee}
+.menu1 li ul {display:none}
+.menu1 li:hover ul {display:block}
+.menu1 >li {display:table-cell;padding:0;border:none}
+</style>
+</head>
+<html>
+<body>
+<div>
+<dl>
+  <dt> .menu1 a {font-size: 20px}</dt>
+  <dd> dla wszystkich tagów a w klasie menu1 ustawia wielkość tekstu na 20px</dd>
+  <dt>.menu1 a {text-decoration:none;}</dt>
+  <dd>dla wszystkich tagów a w klasie menu1 ,tekst nie bedzie miał żadnych dekoracji</dd>
+  <dt>.menu1 a {font-family: arial;display:block;background:#eee;
+    padding:4px 20px;margin:2px;}</dt>
+  <dd>dla wszystkich tagów a w klasie menu1 ,ustawia czcionke na arial,wyświetla w postaci kwadratu, ustawia tło na szare, ustawia margines 2px oraz dopełnieniena 4 i 20 px</dd>
+  <dt>.menu1 li li a {color:black}</dt>
+  <dd>dla tagów a które są dziećmi elementu list który jest zagnieżdżony w innym elemencie listy ,ustawia kolor czcionki na czarny </dd>
+  <dt>.menu1  li:hover> a {background:#aaa;}</dt>
+  <dd>dla tagów a należących do elementu listy li, gdy myszka jest nad nim,zmienia kolor tła na ciemno szary </dd>
+  <dt>.menu1 > li {display:table-cell; padding:0; border:1px solid grey}</dt>
+  <dd>bezpośrednie dzieci li klasy menu1, wyświetla je w postaci tabelki,dopełnienie ustawia na 0, border na 1px,ciągły i szarego koloru  </dd>
+  <dt>.menu1 >li >a {background:#678; color:white;margin:2px;}</dt>
+  <dd>bezpośrednie dziecko o tagu a elemntu li , który jest bezposrednim dzieckiem klasy menu1 ustawie tło na szaro niebieski,czcionke na biały i margines na 2px</dd>
+  <dt>.menu1 >li:hover >a {background:#456; }</dt>
+  <dd>bezpośrednie dziecko o tagu a elemntu li , który jest bezposrednim dzieckiem klasy menu1 i myszka znajduje sie nad nim ustawia tło #456</dd>
+  <dt>.menu1 ul {list-style-type:none} </dt>
+  <dd>w liście kropkowanej klasy menu1 nie wyświetla kropek przed treścią</dd>
+  <dt>.menu1 ul {padding:0} </dt>
+  <dd>ustawia dopełnienie list nieuporządkowanych na 0px</dd>
+  <dt>.menu1 li ul {position:absolute;border:1px solid grey;background:#eee}</dt>
+  <dd>dla podlisty zagnieżdżonej w innej liście o klasie menu1 ustawie pozycje na absolutną , ustawia border na linie ciągła o grubości 1px i kolor szarego oraz ustawia tło na #eee</dd>
+  <dt>.menu1 li ul {display:none}</dt>
+  <dd>ukrwa elemnty podlisty zagnieżdżonej w innej liście o klasie menu1 </dd>
+  <dt>.menu1 li:hover ul {display:block}</dt>
+  <dd>gdy myszka znajduje sie nad elemntem listy , wyświetla znajdującą sie podlistę</dd>
+  <dt>.menu1 >li {display:table-cell;padding:0;border:none}</dt>
+  <dd>bezpośrednie dzieci li klasy menu1, wyświetla je w postaci tabelki,dopełnienie ustawia na 0 i usuwa border </dd>
+
+</div>
+</body>
+</html>
