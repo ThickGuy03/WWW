@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <canvas id="rys" width="600" height="600" style="border:1px solid #000000;"></canvas>
+    <button onclick="balwan()">Narysuj Bałwanka</button>
+
+    <script>
+           let x=300;
+           let y=300;
+           let h=40;
+           
+
+        function balwan() {
+            let rys = document.getElementById("rys");
+            let ctx = rys.getContext("2d");
+            ctx.beginPath();
+            ctx.fill() ;
+            ctx.arc(x, y, h, 0, 2 * Math.PI);
+            ctx.arc(x, y-2*(h-5), h*3/4, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+        function domek(x, y, h) {
+
+        }
+    </script>
+</body>
+
+</html>
