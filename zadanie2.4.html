@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<style>
+    p{
+        display:none;   
+        vertical-align:middle;
+    }
+    body{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<button onclick="f(-1)"> << </button>
+<p style="display: inline;">Magdalena Daria Ikonowicz urodziła się w Komorowie[2]. Jej ojciec, Mirosław Ikonowicz, były korespondent Polskiej Agencji Prasowej, pochodzi z Wileńszczyzny[3]; jego matka miała pochodzenie włoskie, natomiast rodzina ojca Ikonowicza wywodziła się z Bałkanów[4].</p>
+<p>Matka restauratorki, Olga z domu Łucek (1931−2001), była pochodzenia rosyjskiego[5][6][7] i pracowała jako reżyserka dźwięku w Polskim Radiu[8]. </p>
+<p>Brat Magdy Gessler, Piotr Ikonowicz, jest lewicowym politykiem, prawnikiem i dziennikarzem[9]. Jej ojcem chrzestnym był przyjaciel rodziny, Ryszard Kapuściński[10].</p>
+<p>Pierwsze lata życia spędziła w Komorowie pod opieką dziadków ze strony matki, cukierników Ireny i Leona Łucków, a to ze względu na gruźlicę kobiety[11]. </p>
+<p>Spędziła dzieciństwo także w Sofii[12] oraz na Kubie[13], co było związane z działalnością zawodową jej ojca.</p>
+<p>Ukończyła XXII Liceum Ogólnokształcące im. Jose Marti w Warszawie. </p>
+<p>W latach 60. XX w. wraz z rodziną zamieszkała w Hawanie, a po kilku latach w Madrycie, gdzie ukończyła malarstwo w Królewskiej Akademii Sztuk Pięknych św. Ferdynanda[14].</p>
+<p>Biegle mówi w językach: hiszpańskim, niemieckim, włoskim, porozumiewa się też w języku angielskim i portugalskim[15].</p>
+<button onclick="f(1)"> >> </button>
+<button onclick="next()">Start</button>
+<button onclick="stop()">Stop</button>
+<script>
+    var i=0;
+    var paragraph=document.getElementsByTagName("p");
+
+    function f(x)
+    {
+        i+=x;
+  
+        if(i==paragraph.length)
+        {   
+            i=0;
+            paragraph[paragraph.length-1].style.display="none";
+            paragraph[i].style.display="inline";
+        }
+
+        else if(x==-1)
+        {   
+            if(i == -1)
+            {
+                i = paragraph.length-1;
+                paragraph[0].style.display = "none";
+                paragraph[i].style.display = "inline";
+            }
+            else
+            {
+            paragraph[i+1].style.display="none";
+            paragraph[i].style.display="inline";
+            }
+        }
+        else
+        {
+            paragraph[i-1].style.display="none";
+            paragraph[i].style.display="inline";
+        }
+        
+    }
+     
+    function next()
+    {
+        timer=setInterval(f,13000,1);
+        
+    }
+    function stop()
+    {
+        clearInterval(timer)
+
+        
+    }
+    
+</script>
+
+</body>

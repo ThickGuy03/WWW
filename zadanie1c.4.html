@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    img{
+        vertical-align: middle;
+        height: 400px;
+        display:none;
+    }
+    body{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<button onclick="f(-1)"> << </button>
+<img src="img/a0.jpg" style="display:inline">
+<img src="img/a1.jpg">
+<img src="img/a2.jpg">
+<img src="img/a3.jpg">
+<img src="img/a4.jpg">
+<img src="img/a5.jpg">
+<img src="img/a6.jpg">
+<img src="img/a7.jpg">
+<img src="img/a8.jpg">
+<img src="img/a9.jpg">
+<button onclick="f(1)"> >> </button>
+<script>
+    var i=0;
+    var img=document.getElementsByTagName("img")[0];
+    function f(x)
+    {
+        document.images[i].style.display="none";
+        i=i+x;
+       
+        if(i>9)
+        {
+            i=0
+        }
+        if(i<0)
+        {
+            i=9
+        }
+        document.images[i].style.display="inline";
+        img.src="img/a"+i+".jpg";
+    }
+</script>
+
+</body>
+</html>

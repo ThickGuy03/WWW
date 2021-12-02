@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div id="studenci"></div>
+        <button onclick="wszyscy()">Wszyscy</button>
+        <button onclick="pokaz('fizyka')">Fizyka</button>
+        <button onclick="pokaz('chemia')">Chemia</button>
+        <button onclick="pokaz('matematyka')">Matematyka</button>
+        <button onclick="pokaz('historia')">Historia</button>
+        
+    </body>
+    <script>
+        var student=[ {imie:"Ola",nazwisko:"Lis",kierunek:"fizyka",wzrost:170},
+            {imie:"Ala",nazwisko:"Góral",kierunek:"chemia",wzrost:165},
+            {imie:"Jan",nazwisko:"Nowak",kierunek:"fizyka",wzrost:180},
+            {imie:"Kamil",nazwisko:"Lis",kierunek:"historia", wzrost:205},
+            {imie:"Krystain",nazwisko:"Góral",kierunek:"matematyka",wzrost:160},
+            {imie:"Karolina",nazwisko:"Nowak",kierunek:"historia",wzrost:170},
+            {imie:"Nicola",nazwisko:"Buła",kierunek:"chemia",wzrost:180},
+            {imie:"Marysia",nazwisko:"Buła",kierunek:"matematyka",wzrost:150}];
+            function wszyscy()
+            {
+                var studenci=document.getElementById("studenci");
+                var a="";
+                studenci.innerHTML+="<h2>Studenci</h2>"
+                for(let i=0;i<student.length;i++)
+                {
+                    if(student[i].kierunek=="fizyka"){var c="blue"}
+                    if(student[i].kierunek=="matematyka"){var c="red"}
+                    if(student[i].kierunek=="historia"){var c="yellow"}
+                    if(student[i].kierunek=="chemia"){var c="green"}
+                    a += "<li style='width: "+ student[i].wzrost*1.5 +";background-color: "+ c +";'>" + student[i].imie + " " + student[i].nazwisko + " (" + student[i].kierunek + ") " + "</li>";
+                }
+                studenci.innerHTML+="<ol>"+a+"</ol>";
+            }
+            function pokaz(nazwaKierunku)
+            {
+                studenci.innerHTML ="";
+                studenci.innerHTML+= "<h2>"+nazwaKierunku+"</ol>";
+                var a="";
+                for(let i=0;i<student.length;i++)
+                {
+                    if(student[i].kierunek==nazwaKierunku)
+                    {
+                        if(student[i].kierunek=="fizyka"){var c="blue"}
+                        if(student[i].kierunek=="matematyka"){var c="red"}
+                        if(student[i].kierunek=="historia"){var c="yellow"}
+                        if(student[i].kierunek=="chemia"){var c="green"}
+                        a += "<li style='width: "+ student[i].wzrost*1.5 +";background-color: "+ c +";'>" + student[i].imie + " " + student[i].nazwisko + " (" + student[i].kierunek + ") " + "</li>";
+                    }
+                }
+                studenci.innerHTML+="<ol>"+a+"</ol>";
+            }
+            
+    </script>
+</html>

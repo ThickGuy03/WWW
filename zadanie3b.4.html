@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{width: 10px;
+                position:absolute;
+                bottom:50%;
+                left:50%;
+                transform-origin: 50% 100%;
+            }
+            div:nth-child(1){height: 200px;
+                background: gray;
+                }
+            div:nth-child(2){height: 300px;
+                background: lightgray;
+            }
+            div:nth-child(3){height: 310px;
+                background: red;
+            }
+        </style>
+        
+    </head>
+<body>
+<div id="g"></div>
+<div id="m"></div>
+<div id="s"></div>
+<script>
+    time=setInterval(zegar,1000)
+    function zegar()
+    {
+        const d=new Date();
+        var g=d.getHours();
+        var m=d.getMinutes();
+        var s=d.getSeconds();
+        var degg= ((g+m/60)/12)*360;
+        var degm=((m+s/60)/12)*360;
+        var degs=(s/60)*360;
+        
+        document.getElementById("g").style.transform="rotate("+degg+"deg)"
+        document.getElementById("m").style.transform="rotate("+degm+"deg)"
+        document.getElementById("s").style.transform="rotate("+degs+"deg)"
+    }
+</script>
+</body>
+</html>

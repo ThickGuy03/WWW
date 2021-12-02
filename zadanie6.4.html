@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<style>
+    #ramka {height:800px;width:800px; border:1px solid grey;margin:auto;position:relative}
+    b {position:absolute;width:10px;height: 10px;display:block;}
+    h1,div {text-align:center;margin:10px}
+    img{height:30px;width:30px;align-items: center;}
+</style>
+</head>
+<body>
+
+</body>
+
+<h1>Samolociki</h1>
+<div id='ramka'>
+    <script>
+        for(let i=0;i<8;i++)
+            document.write("<b><img src='samolot.jpg'></b>");
+    </script>
+</div>
+<div>
+    <button onclick="run=false"> Stop </button>
+    <button onclick="run=true;krok();var time=setInterval(counter,1000)"> Start </button>
+    <button onclick="newGame()"> Nowa Gra </button>
+    <button onclick="level0()"> Poziom 0 </button>
+    <button onclick="level1()"> Poziom 1 </button>
+    <button onclick="level2()"> Poziom 2 </button>
+</div>
+<div>
+    Ilość samolotów: 
+    <p id="number"></p>
+</div>
+
+
+<script>
+        var numBalls=parseInt(document.querySelectorAll('b').length);
+        var run=false;
+        document.getElementById("number").innerHTML=numBalls;
+        time_to_step=15;
+        var balls=document.getElementsByTagName('B');
+        var numSec=0;
+        function newGame()
+        {
+            location.reload();
+        }
+        function level0()
+        {
+            document.getElementById('ramka').innerHTML = "";
+            time_to_step=50;
+            var balls=document.getElementsByTagName('b');
+            for(var i=0;i<15;i++)
+            document.getElementById("ramka").innerHTML+=("<b><img src='samolot.jpg'></b>");
+            for(let ball of balls)
+            {
+                ball.x=Math.random()*770;
+                ball.y=Math.random()*770;
+
+                ball.vx=Math.random()*20-10;
+                ball.vy=Math.random()*20-10;
+                
+                ball.style.left=ball.x+"px";
+                ball.style.top =ball.y+"px";
+                ball.style.transform="rotate("+Math.atan2(ball.vy,ball.vx)+"rad)";
+                
+                ball.onmousedown=disapear;
+            }
+            numBalls=parseInt(document.querySelectorAll('b').length);
+            document.getElementById("number").innerHTML=numBalls;
+        }
+        function level1()
+        {
+            document.getElementById('ramka').innerHTML = "";
+            time_to_step=10;
+            var balls=document.getElementsByTagName('b');
+            for(var i=0;i<25;i++)
+            document.getElementById("ramka").innerHTML+=("<b><img src='samolot.jpg'></b>");
+            for(let ball of balls)
+            {
+                ball.x=Math.random()*770;
+                ball.y=Math.random()*770;
+
+                ball.vx=Math.random()*20-10;
+                ball.vy=Math.random()*20-10;
+                
+                ball.style.left=ball.x+"px";
+                ball.style.top =ball.y+"px";
+                ball.style.transform="rotate("+Math.atan2(ball.vy,ball.vx)+"rad)";
+                
+                ball.onmousedown=disapear;
+            }
+            numBalls=parseInt(document.querySelectorAll('b').length);
+            document.getElementById("number").innerHTML=numBalls;
+
+        }
+        function level2()
+        {   
+            document.getElementById('ramka').innerHTML = "";
+            time_to_step=5;
+            var balls=document.getElementsByTagName('b');
+            for(var i=0;i<50;i++)
+                document.getElementById("ramka").innerHTML+=("<b><img src='samolot.jpg'></b>");
+            for(let ball of balls)
+            {
+                ball.x=Math.random()*770;
+                ball.y=Math.random()*770;
+
+                ball.vx=Math.random()*20-10;
+                ball.vy=Math.random()*20-10;
+                
+                ball.style.left=ball.x+"px";
+                ball.style.top =ball.y+"px";
+                ball.style.transform="rotate("+Math.atan2(ball.vy,ball.vx)+"rad)";
+                
+                ball.onmousedown=disapear;
+            }
+            numBalls=parseInt(document.querySelectorAll('b').length);
+            document.getElementById("number").innerHTML=numBalls;
+
+        }
+        
+        for(let ball of balls)
+        {
+            ball.x=Math.random()*770;
+            ball.y=Math.random()*770;
+
+            ball.vx=Math.random()*20-10;
+            ball.vy=Math.random()*20-10;
+            
+            ball.style.left=ball.x+"px";
+            ball.style.top =ball.y+"px";
+            ball.style.transform="rotate("+Math.atan2(ball.vy,ball.vx)+"rad)";
+            ball.onmousedown=disapear;
+        }
+
+    function krok()
+    {
+        for(let ball of balls)
+        {
+            ball.x += ball.vx;
+            ball.y += ball.vy;
+            
+            if(ball.x>800 || ball.x<0)  ball.vx*=-1;
+            if(ball.y>800 || ball.y<0)  ball.vy*=-1;
+            
+            ball.style.left= ball.x+"px";
+            ball.style.top = ball.y+"px";
+            ball.style.transform="rotate("+Math.atan2(ball.vy,ball.vx)+"rad)";
+        }
+        
+        if(run)
+            setTimeout(krok,time_to_step);
+        
+    }
+    
+    function disapear() 
+    {
+        numBalls-=1;
+        document.getElementById("number").innerHTML=numBalls
+        this.style.display="none";
+        if(numBalls==0)
+        {
+            document.getElementById("number").innerHTML="Mission completed in "+numSec+" seconds!"
+        }
+    }
+    function counter()
+    {
+        numSec+=1;
+    }
+    
+</script>
+
+</html>
