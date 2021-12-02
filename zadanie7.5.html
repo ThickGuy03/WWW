@@ -14,24 +14,37 @@
 <body>
 
     <canvas id="rys" width="600" height="600" style="border:1px solid #000000;"></canvas>
-    <button onclick="balwan()">Narysuj Bałwanka</button>
+    <button onclick="balwan(x,y,h)">Narysuj Bałwanka</button>
+    <button onclick="domek(x,y,h)">Narysuj Domek</button>
 
     <script>
-           let x=300;
-           let y=300;
-           let h=40;
-           
+            let x=300;
+            let y=540;
+            let h=60;
+            var rys = document.getElementById("rys");
+            var ctx = rys.getContext("2d");
+        function balwan(x,y,h) {
 
-        function balwan() {
-            let rys = document.getElementById("rys");
-            let ctx = rys.getContext("2d");
-            ctx.beginPath();
-            ctx.fill() ;
+            var circle=function(x,y,h)
+            {
+            ctx.beginPath()
             ctx.arc(x, y, h, 0, 2 * Math.PI);
-            ctx.arc(x, y-2*(h-5), h*3/4, 0, 2 * Math.PI);
+            ctx.closePath();
             ctx.stroke();
+            }
+            circle(x,y,h);
+            circle(x,y-(1.75*h),h*3/4);
+            circle(x,y-(3*h),h*2/4);
         }
         function domek(x, y, h) {
+            ctx.strokeRect(x,y,2*h,h);
+            ctx.fillRect(x+h/2,y+5,h,h-5)
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x+h, y-h);
+            ctx.lineTo(x+2*h, y);
+            ctx.closePath();
+            ctx.stroke();
 
         }
     </script>

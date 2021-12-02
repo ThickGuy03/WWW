@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        h1,b {font-weight:normal;}
+        div {text-align:center}
+        div.wykres > div {
+                width:50px;
+                margin:15px;
+                box-shadow:10px 10px 5px grey;
+                border:1px solid grey;
+                display:inline-block;
+                margin-top:50px;
+                vertical-align:bottom;
+            }
+        div.wykres > div b { 
+                top:-20px;
+                display:box;
+                position:relative;
+                text-shadow:5px 5px 5px grey;
+            }   
+        div.wykres div div {
+                color:white;
+                position:relative;
+                top:-19px;
+                text-shadow:0px 0px 5px black;                
+                }
+        </style>
+    </head>
+    <body>
+        <button onclick="wszyscy()">Wszyscy</button>
+        <button onclick="pokaz('fizyka')">Fizyka</button>
+        <button onclick="pokaz('chemia')">Chemia</button>
+        <button onclick="pokaz('matematyka')">Matematyka</button>
+        <button onclick="pokaz('historia')">Historia</button></br>
+        <button onclick="wypisz(policz(student))">Wypisz, ilu jest studentów na danych kierunkach</button></br>
+        <button onclick="wykres(policz(student),'studenci')">Wykres</button>
+        <div id="studenci"></div>
+    </body>
+    <script>
+        var student=[ {imie:"Ola",nazwisko:"Lis",kierunek:"fizyka",wzrost:170},
+            {imie:"Ala",nazwisko:"Góral",kierunek:"chemia",wzrost:165},
+            {imie:"Jan",nazwisko:"Nowak",kierunek:"fizyka",wzrost:180},
+            {imie:"Kamil",nazwisko:"Lis",kierunek:"historia", wzrost:205},
+            {imie:"Krystain",nazwisko:"Góral",kierunek:"matematyka",wzrost:160},
+            {imie:"Karolina",nazwisko:"Nowak",kierunek:"historia",wzrost:170},
+            {imie:"Nicola",nazwisko:"Buła",kierunek:"chemia",wzrost:180},
+            {imie:"Marysia",nazwisko:"Buła",kierunek:"matematyka",wzrost:150}];
+            function wszyscy()
+            {
+                var studenci=document.getElementById("studenci");
+                var a="";
+                studenci.innerHTML+="<h2>Studenci</h2>"
+                for(let i=0;i<student.length;i++)
+                {
+                    if(student[i].kierunek=="fizyka"){var c="blue"}
+                    if(student[i].kierunek=="matematyka"){var c="red"}
+                    if(student[i].kierunek=="historia"){var c="yellow"}
+                    if(student[i].kierunek=="chemia"){var c="green"}
+                    a += "<li style='width: "+ student[i].wzrost*1.5 +";background-color: "+ c +";'>" + student[i].imie + " " + student[i].nazwisko + " (" + student[i].kierunek + ") " + "</li>";
+                }
+                studenci.innerHTML+="<ol>"+a+"</ol>";
+            }
+            function pokaz(nazwaKierunku)
+            {
+                studenci.innerHTML ="";
+                studenci.innerHTML+= "<h2>"+nazwaKierunku+"</ol>";
+                var a="";
+                for(let i=0;i<student.length;i++)
+                {
+                    if(student[i].kierunek==nazwaKierunku)
+                    {
+                        if(student[i].kierunek=="fizyka"){var c="blue"}
+                        if(student[i].kierunek=="matematyka"){var c="red"}
+                        if(student[i].kierunek=="historia"){var c="yellow"}
+                        if(student[i].kierunek=="chemia"){var c="green"}
+                        a += "<li style='width: "+ student[i].wzrost*1.5 +";background-color: "+ c +";'>" + student[i].imie + " " + student[i].nazwisko + " (" + student[i].kierunek + ") " + "</li>";
+                    }
+                }
+                studenci.innerHTML+="<ol>"+a+"</ol>";
+            }
+            
+            function policz(student)
+            {
+                var liczba ={
+                    kierunek:"fizyka",value:0,color:"blue",
+                    kierunek:"matematyka",value:0,color:"green",
+                    kierunek:"historia",value:0,color:"red",
+                    kierunek:"chemia",value:0,color:"grey"}
+                    
+                for(var i=0;i<student.length;i++)
+                {
+                    if(student[i].kierunek=="fizyka")liczba.kierunek[0].value+=1;
+                    if(student[i].kierunek=="matematyka")liczba.kierunek[1].value+=1;
+                    if(student[i].kierunek=="chemia")liczba.kierunek[3].value+=1;
+                    if(student[i].kierunek=="historia")liczba.kierunek[2].value+=1;
+                }
+                return liczba;
+            }
+            function wypisz(kogo)
+            {
+                studenci.innerHTML="";
+                studenci.innerhtml="Liczba studentów na danych kierunkach";
+                var a="";
+                a="Fizyka: "+kogo.fizyka+" Matematyka: "+kogo.matematyka+" Chemia: "+kogo.chemia+" Historia: "+kogo.historia;
+                studenci.innerHTML+=a;
+            }
+            function wykres(dane)
+            {
+                let t='<h1>Wykres studentów na danych kierunkach</h1>';
+                
+                for(let x of dane)
+                {
+                    t+="<div style='height:"+x.value+"px;background:"+x.color+"'>";
+                    t+="<b>"+x.kierunek+"</b>";
+                    t+="<div>"+x.value+"</div>";
+                    t+="</div>";
+                }
+
+                t+='</div>';
+                document.getElementById(id).innerHTML=t;
+            }
+    </script>
+</html>

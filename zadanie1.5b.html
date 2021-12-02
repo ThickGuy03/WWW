@@ -1,83 +1,233 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
-<style>
-.menu1 a {font-size: 20px}
-.menu1 a {text-decoration:none;}
-.menu1 a {font-family: arial;display:block;background:#eee;
-	       padding:4px 20px;margin:2px;}
-.menu1 li li a {color:black}
-.menu1  li:hover> a {background:#aaa;}
-.menu1 > li {display:table-cell; padding:0; border:1px solid grey}
-.menu1 >li >a {background:#678; color:white;margin:2px;}
-.menu1 >li:hover >a {background:#456; }
-.menu1 ul {list-style-type:none} 
-.menu1 ul {padding:0} 
-.menu1 li ul {position:absolute;border:1px solid grey;background:#eee}
-.menu1 li ul {display:none}
-.menu1 li:hover ul {display:block}
-.menu1 >li {display:table-cell;padding:0;border:none}
-</style>
+    <style>
+        .menu1 a {
+            font-size: 20px
+        }
+
+        .menu1 a {
+            text-decoration: none;
+        }
+
+        .menu1 a {
+            font-family: arial;
+            display: block;
+            background: #eee;
+            padding: 4px 20px;
+            margin: 2px;
+        }
+
+        .menu1 li li a {
+            color: black
+        }
+
+        .menu1 li:hover>a {
+            background: #aaa;
+        }
+
+        .menu1>li {
+            display: table-cell;
+            padding: 0;
+            border: 1px solid grey
+        }
+
+        .menu1>li>a {
+            background: #678;
+            color: white;
+            margin: 2px;
+        }
+
+        .menu1>li:hover>a {
+            background: #456;
+        }
+
+        .menu1 ul {
+            list-style-type: none
+        }
+
+        .menu1 ul {
+            padding: 0
+        }
+
+        .menu1 li ul {
+            position: absolute;
+            border: 1px solid grey;
+            background: #eee
+        }
+
+        .menu1 li ul {
+            display: none
+        }
+
+        .menu1 li:hover ul {
+            display: block
+        }
+
+        .menu1>li {
+            display: table-cell;
+            padding: 0;
+            border: none
+        }
+    </style>
 </head>
 <html>
+
 <body>
-<div>
-<ul class="menu1">
-    <li><a href=#>Albert Einstein</a>
-      <ul>
-        <li><a href=#historia></a></li>
-        <li><a href=#hisotria></a></li>
-        <li><a href=#historia></a></li>
-        <li><a href=#hisotria></a></li>
-       </ul>
-    </li>
-    <li ><a href=#>Marie Salomea Skłodowska Curie</a>
-      <ul>
-        <li><a href=#historia>7 November 1867 – 4 July 1934) was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity.</a></li>
-        <li><a href=#historia>She was the first woman to win a Nobel Prize, the first person and the only woman to win the Nobel Prize twice, and the only person to win the Nobel Prize in two scientific fields.</a></li>
-        <li><a href=#historia>Her husband, Pierre Curie, was a co-winner on her first Nobel Prize, making them the first ever married couple to win the Nobel Prize and launching the Curie family legacy of five Nobel Prizes.</a></li>
-        <li><a href=#historia>She was, in 1906, the first woman to become a professor at the University of Paris.[4]</a></li>
-      </ul>
-    </li>
-    <li ><a href=#>Isaac Newton</a>
-      <ul>
-        <li><a href=#historia>Wrocław</a></li>
-        <li><a href=#historia>Kraków</a></li>
-        <li><a href=#historia>Poznań</a></li>
-      </ul>
-    </li>
-    <li ><a href=#>Ryby</a>
-      <ul>
-        <li><a href=#historia>Dorsz</a></li>
-        <li><a href=#historia>Śledź</a></li>
-        <li><a href=#historia>Sum</a></li>
-      </ul>
-    </li>
-</ul>
-<p id="Albert">
-  <ul>
-  <li><a href="">14 March 1879 – 18 April 1955) was a German-born theoretical physicist,[5] widely acknowledged to be one of the greatest physicists of all time.<br></li>
-  <li><a href="">Einstein is best known for developing the theory of relativity, but he also made important contributions to the development of the theory of quantum mechanics.<br></li>
-  <li><a href="">Relativity and quantum mechanics are together the two pillars of modern physics.<br></li>
-  <li><a href="">His mass–energy equivalence formula E = mc2, which arises from relativity theory, has been dubbed "the world's most famous equation".<br></li>
-  </ul>
-</p>
-<p id="Skłodowksa">
-  <ul>
-    <li><a href="">7 November 1867 – 4 July 1934) was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity.</br></a></li>
-    <li><a href="">She was the first woman to win a Nobel Prize, the first person and the only woman to win the Nobel Prize twice, and the only person to win the Nobel Prize in two scientific fields. </br></a></li>
-    <li><a href="">Her husband, Pierre Curie, was a co-winner on her first Nobel Prize, making them the first ever married couple to win the Nobel Prize and launching the Curie family legacy of five Nobel Prizes. </br></a></li>
-    <li><a href="">She was, in 1906, the first woman to become a professor at the University of Paris.[4] </br></a></li>
-  </ul>
-</p>
-<p id="Newton">
-  <ul>
-    <li>
-    <li>
-    <li>
-    <li>
-  </ul>
-</p>
-</div>
+    <div>
+        <ul class="menu1">
+            <li><a href=#>Częstochowa</a>
+                <ul>
+                    <li><a href=#ogolne>Ogólne</a></li>
+                    <li><a href=#ludnosc>Ludność</a></li>
+                    <li><a href=#nazwa>Nazwa</a></li>
+                    <li><a href=#hisotria>Historia</a></li>
+                    <li><a href=#potop>Potop Szwedzki</a></li>
+                    <li><a href=#zabory>Zabory</a></li>
+                    <li><a href=#2rzeczpospolita>II Rzeczpospolita</a></li>
+                    <li><a href=#2wojna>II Wojna Światowa</a></li>
+                    <li><a href=#powojenny>Okres Powojenny</a></li>
+                    <li><a href=#3rp>III Rzeczpospolita</a></li>
+                </ul>
+            </li>
+        </ul>
+        <h1>Częstochowa</h1>
+        <dl>
+            <dt id="ogolne">
+                <h2>Ogólnie informacje</h2>
+            </dt>
+            <dd>
+                Miasto na prawach powiatu w południowej Polsce, w województwie śląskim, siedziba powiatu częstochowskiego.
+                W latach 1975–1998 stolica województwa częstochowskiego.
+                Częstochowa, pomimo tego że znajduje się w granicach województwa śląskiego, historycznie, kulturowo i etnicznie należy do Małopolski.
+                Częstochowa jest położona w północnej części województwa śląskiego, nad rzeką Wartą, w trzech mezoregionach fizycznogeograficznych, należących do Wyżyny Krakowsko-Częstochowskiej i Wyżyny Woźnicko-Wieluńskiej.
+            </dd>
+            <dt id="ludnosc">
+                <h2>Ludność</h2>
+            </dt>
+            <dd>
+                Według danych GUS z 31 grudnia 2020 r., miasto było zamieszkiwane przez 217 530 osób.
+                Jest to 13. miasto w Polsce pod względem zajmowanej powierzchni i pod względem liczby ludności.
+            </dd>
+            <dt id="nazwa">
+                <h2>Nazwa</h2>
+            </dt>
+            <dd>
+                Pierwsza wzmianka o Częstochowie pochodzi z 1220 roku, z dokumentu biskupa krakowskiego Iwona Odrowąża, w którym miejscowość wymieniona jest jako Czanstochowa. Nazwa była później notowana także w formach Chastochova (1250), Czanstochowa, Antiquo Czanstochowa, Noua Czanstochowa (1382), Czestochowa (1542), Czenstochow (1558), Częstochowa (1564), w Częstochowie (1658), w Częstochowey (1670), Częstochowa (1680), Częstochowa (1787), Częstochowa (1827), Częstochowa (1880).
+                Nazwa Częstochowa jest nazwą dzierżawczą utworzoną od nazwy osobowej Częstoch przyrostkiem dzierżawczym -owa, -ow.
+                Oznaczała pierwotnie ‘własność Częstocha’.
+                Imię Częstoch, które w formie Chestoch pojawia się już w gnieźnieńskiej bulli protekcyjnej papieża Innocentego II datowanej na 7 lipca 1136 roku i wystawionej w Pizie, jest skróceniem od staropolskich imion złożonych typu Częstobor, Częstomir, zawierających w sobie prasłowiański rdzeń *čęstъ ‘częsty’.
+                Etymologia ludowa wywodzi nazwę miasta z wyrażenia często (się) chować.
+                Nazwa Częstochowa miałaby powstać z powodu częstego chowania się widoku miasta wśród okolicznych wzgórz przed zbliżającymi się do miasta pielgrzymami.
+                W wymowie gwarowej okolicznej ludności wiejskiej odnotowano brzmienie cy̨stoxova z widocznym zjawiskiem mazurzenia (č > c) i pochyloną wymową ę, które przechodzi w nosowe y — y̨.
+                Z zapisów historycznych wynika, że do ok. połowy XVI wieku nazwa miasta nie miała ustalonego rodzaju i występowała w dwóch formach: Częstochowa i Częstochow, dlatego współczesną formę miejscownika w Częstochowie można wyjaśnić jako rezultat pomieszania się dwóch paradygmatów odmiany, a nie tylko jako relikt odmiany niezłożonej (rzeczownikowej).
+                Ludność żydowska zamieszkująca miasto używała w języku jidisz nazwy Czenstochow.
+                W okresie zaborów w źródłach rosyjskich pojawiały się formy Czenstochowa, Czenstochow, rzadko Czenstochowo.
+            </dd>
+            <dt id="historia">
+                <h2>Historia</h2>
+            </dt>
+            <dd>
+                W języku niemieckim istnieje forma Tschenstochau, która używana była m.in. w czasie okupacji hitlerowskiej podczas drugiej wojny światowej.
+                Według legendy nazwa Częstochowa oznacza osadę założoną przez osobę o imieniu Częstoch, jednak pierwsza wzmianka o niej pochodzi z 1220 roku, z dokumentu biskupa krakowskiego Iwona Odrowąża.
+                W pobliżu Częstochowy leżała wówczas druga wieś, Częstochówka.
+                Kwestia daty nadania osadzie praw miejskich jest niejednoznaczna, ale określa się to zdarzenie na okres pomiędzy 1370 a 1377 rokiem.
+                Częstochowa przeżyła dynamiczny rozwój w wieku XIV, któremu sprzyjało położenie na szlaku łączącym Małopolskę z Wielkopolską.
+                Kościół św. Zygmunta (XIV w.), miejsce odbycia jedynego w historii Częstochowy sejmiku
+                W latach 1370–1393 Częstochowa stanowiła lenno Władysława Opolczyka.
+                W tym okresie ustaliło się określenie miasta Częstochowy nazwą Stara Częstochowa, a należącej do ufundowanego w 1382 r. klasztoru Jasna Góra wsi na wzgórzu Częstochówką.
+                W okresie staropolskim miasto Stara Częstochowa wielokrotnie procesowało się z klasztorem jasnogórskim w sprawie łamania praw miejskich przez zakon i zagarniania zysków z handlu z pielgrzymami.
+                Kolejny okres rozwoju nastąpił w XVI wieku w związku ze szczodrością króla Polski Zygmunta I, który nadał miastu liczne przywileje.
+                W latach 1625–1630 region dotknięty został zarazą.
+                W 1587 roku wojsko pretendenta do korony królewskiej Maksymiliana III Habsburga złupiło miasto.
+                Ze względu na peryferyjne położenie klasztoru jasnogórskiego królowie z dynastii Wazów zdecydowali obwarować go nowoczesnymi fortyfikacjami typu holenderskiego z bastionami.
+            </dd>
+            <dt id="potop">
+                <h2>Potop Szwedzki</h2>
+            </dt>
+            <dd>
+                Po rozpoczęciu potopu szwedzkiego jasnogórscy paulini złożyli hołd poddaństwa królowi Szwecji, a jednocześnie zaczęli przygotowania do obrony klasztoru na wypadek ataku na klasztor.
+                Obrona Jasnej Góry na obrazie Januarego Suchodolskiego
+                18 listopada 1655 r. pod Jasną Górą znalazły się szwedzkie wojska, które zaczęły oblężenie klasztoru, które składało się głównie z drobnych potyczek i wymiany ognia artyleryjskiego.
+                Kilkukrotnie przerywano też chaotyczne działania zbrojne z powodu rokowań, a polska załoga kilkukrotnie usiłowała zmusić przeora Augustyna Kordeckiego do poddania twierdzy przeciwnikowi.
+                W nocy z 26 na 27 grudnia wojska szwedzkie ostatecznie wycofały się spod twierdzy.
+                W okresie potopu miasto zostało w znacznej części zniszczone i odbudowywało się długo i powoli.
+                W 1665 roku miała tu miejsce bitwa pod Częstochową, część rokoszu Lubomirskiego.
+                27 lutego 1670 roku w klasztorze na Jasnej Górze odbył się ślub polskiego króla Michała z arcyksiężniczką Eleonorą.
+                Kazimierz Pułaski i konfederaci barscy pod Częstochową na obrazie Józefa Chełmońskiego
+                29 lutego 1768 roku została zawiązana konfederacja barska. Konfederaci zajęli twierdzę Jasna Góra, kierował nimi Kazimierz Pułaski.
+                Okres po potopie był natomiast pomyślny dla Częstochówki, która dynamicznie rozwijała się i rozbudowywała. Będący właścicielem wsi klasztor intensywnie zabiegał o rozwój osady.
+                W 1717 roku klasztor otrzymał przywilej nadający Częstochówce prawa miejskie jako Nowa Częstochowa.
+                Nowe miasto zostało jednak zrujnowane w okresie konfederacji barskiej.
+                Po uchwaleniu Konstytucji 3 maja na miejsce sejmiku dla powiatów lelowskiego i ksiąskiego wyznaczono Starą Częstochowę.
+            </dd>
+            <dt id="zabory">
+                <h2>Zabory</h2>
+            </dt>
+            <dd>
+                Po II rozbiorze Polski obie miejscowości znalazły się w Prusach, po 1807 roku w granicach Księstwa Warszawskiego, a od 1815 roku w składzie Królestwa Polskiego.
+                Plan połączenia miast podjęto w 1823 roku, a jego opracowaniem zajął się inżynier wojewódzki Jan Bernhard, który w 1819 roku wytyczył Aleję Panny Maryi (obecnie Aleja Najświętszej Maryi Panny).
+                Formalnie oba miasta zostały połączone w jedno 19 sierpnia 1826 roku.
+                Po połączeniu obu miast Częstochowa pod względem liczby ludności wysunęła się na czwarte miejsce w Królestwie, po Warszawie, Lublinie i Kaliszu.
+                Oddział powstańców styczniowych pod Jasną Górą
+                W okresie powstania styczniowego w okolicach miasta dochodziło do licznych potyczek oddziałów powstańczych z wojskami rosyjskimi.
+                Przemysł zaczął rozwijać się w Częstochowie na początku lat 70. XIX wieku.
+                Pierwszym większym przedsiębiorcą w Częstochowie był Berek Kohn, który w 1869 r. uruchomił razem z Adolfem Oderfeldem drukarnię i zakład litograficzny.
+                W 1897 r. w podczęstochowskim Rakowie Bernard Hantke uruchomił obecną Hutę Częstochowa.
+                W 1904 r. w Częstochowie zaczął tworzyć się ruch rewolucyjny.
+                Po wybuchu rewolucji w styczniu 1905 r. robotnicy częstochowscy ogłosili w lutym strajk powszechny.
+                W 1909 roku w mieście odbyła się Wielka Wystawa Rolniczo-Przemysłowa.
+                Wkrótce po wybuchu I wojny światowej Częstochowa została bez walk zajęta (3 sierpnia 1914) przez wojska niemieckie.
+                W okresie okupacji sytuacja ludności miasta uległa gwałtownemu pogorszeniu, z miasta wyjechało ponad 20 000 robotników.
+                Już 7 sierpnia 1914 r. dokonano mordów w dzielnicy podjasnogórskiej.
+                W odróżnieniu od miasta Jasna Góra znalazła się od kwietnia 1915 r. pod okupacją katolickich Austro-Węgier.
+            </dd>
+            <dt id="2rzeczpospolita">
+                <h2>II Rzeczpospolita</h2>
+            </dt>
+            <dd>
+                10 listopada 1918 r. częstochowianie rozpoczęli rozbrajanie stacjonujących w mieście wojsk niemieckich.
+                12 listopada 1918 roku przemaszerowały częstochowskimi Alejami trzy kompanie Wojska Polskiego pod dowództwem kpt. Ludwikowskiego.
+                27 maja 1919 r. doszło w mieście do pogromów Żydów, w wyniku których zginęło 7 osób.
+                W okresie powstań śląskich Częstochowa była głównym ośrodkiem pomocy dla powstańców. W mieście organizowano zbiórki pieniędzy i lekarstw oraz punkty werbunku ochotników.
+                Po załamaniu się polskiej ofensywy na Kijów w 1920 roku Częstochowa musiała przez kilka miesięcy zakwaterować i wyżywić rząd ukraiński Semena Petlury wraz z dwoma tysiącami uchodźców.
+                W okresie dwudziestolecia międzywojennego trwał dalszy rozwój miasta, jednak lokalny przemysł podupadł i rozwijał się w znacznie wolniejszym tempie, co było skutkiem zniszczeń wojennych i załamania koniunktury. W 1939 roku Częstochowa liczyła już 138 tys. mieszkańców, co plasowało ją na 8 miejscu pod względem największych miast Polski.
+                Od 1925 roku w Częstochowie mieściła się siedziba biskupstwa (od 1992 arcybiskupstwa).
+                W czerwcu 1937 roku doszło w mieście do rozruchów antyżydowskich. Przez tydzień plądrowano żydowskie sklepy.
+            </dd>
+            <dt id="2wojna">
+                <h2>II Wojna Światowa</h2>
+            </dt>
+            <dd>
+                Żołnierze niemieccy na ziemi częstochowskiej w czasie kampanii wrześniowej
+                Po wybuchu II wojny światowej Niemcy wkroczyli do miasta 3 września 1939 roku i już następnego dnia dokonali mordów, które do historii przeszły pod nazwą krwawego poniedziałku.
+                W okresie okupacji miały miejsce represje wymierzone w elitę społeczną i ludność żydowską. W 1942 r. utworzona została dla coraz liczniej napływającej społeczności niemieckiej wydzielona dzielnica.
+                W 1941 r. została utworzona w Częstochowie dzielnica żydowska, którą rozpoczęto likwidować w 1942 r. wywożąc ludność do obozu zagłady w Treblince.
+                Ludność pozostałą po tej akcji terroryzowano i mordowano w kilku kolejnych akcjach, m.in. 25 czerwca 1943 r, gdy ludność żydowska stawiła zbrojny opór.
+                W czasie wojny i bezpośrednio po niej w rejonie Częstochowy działały silne oddziały partyzanckie niepodległościowego podziemia.
+                Po upadku powstania warszawskiego Częstochowa była stolicą Polskiego Państwa Podziemnego.
+                16 stycznia 1945 roku, po całodziennych walkach, Częstochowę opuścił garnizon niemiecki, a miasto zostało zajęte przez sowieckie oddziały mjra Siemiona Chochriakowa.
+            </dd>
+            <dt id="powojenny">
+                <h2>Okres Powojenny</h2>
+            </dt>
+            <dd>
+                W okresie Polski Ludowej szybka rozbudowa huty, która zyskała imię Bolesława Bieruta, spowodowała dynamiczny rozwój miasta.
+                Ponadto powstały Zakłady Przemysłu Bawełnianego im. Zygmunta Modzelewskiego, Zakłady Przemysłu Lniarskiego „Warta”, rozwinął się również przemysł metalowy, szklarski i chemiczny.
+                Z inicjatywy prof. Jerzego Kołakowskiego powołana została Wyższa Szkoła Inżynierska w Częstochowie, obecna Politechnika Częstochowska.
+                Jan Paweł II odwiedził Częstochowę sześciokrotnie: w latach 1979, 1983, 1987, 1991, 1997 i 1999. 15 sierpnia 1991 odprawiona z jego udziałem msza św. (kończąca VI Światowe Dni Młodzieży) zgromadziła 1,5 mln wiernych, a papież od władz miasta otrzymał klucz do jego bram oraz tytuł honorowego obywatela.
+                Częstochowa stała się pierwszym miastem na świecie, od którego przyjął takie wyróżnienie.
+            </dd>
+            <dt id="3rp">
+                <h2>III Rzeczpospolita</h2>
+            </dt>
+            <dd>
+                15 listopada 2009 w mieście odbyło się referendum w sprawie odwołania prezydenta Tadeusza Wrony.
+                Prezydent został odwołany 39 284 głosami.
+                Obecnie (2020) prezydentem miasta jest Krzysztof Matyjaszczyk, reprezentant SLD.
+            </dd>
+    </div>
 </body>
+
 </html>
