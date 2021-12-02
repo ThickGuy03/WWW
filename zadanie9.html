@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Zadanie 9</title>
+<style>
+    #wynik
+    {
+        font-weight: solid;
+        background: lightgrey;  
+        text-align: center;
+        padding:1px;
+        border:solid black;
+    }
+    p
+    {
+        text-align: center;
+    }
+    
+</style>
+</head>
+<body>
+<p>Kalkulator</p>
+<input style='margin-left:40%;' onchange="document.getElementById('wynik').innerHTML+='<br>'+this.value+'='+eval(this.value)">
+<button onclick="location=location">Wyczyść</button>
+<div id="wynik"></div>
+<p >Do powyższej luki należy wpisać działanie matematyczne.</p>
+<p> Nalęzy też pamietać ze funkcje takie jak pierwiastek należy poprzedzić odwołaniem do biblioteko Math.sqrt().</p>
+</body>
+</html>

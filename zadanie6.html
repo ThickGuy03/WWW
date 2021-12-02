@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            table.A
+            {
+                border:solid black;
+                padding:1px;
+                background-color: white;
+            }
+            table.A th
+            {
+                border:double black;
+                margin:1px;
+                background-color: white;
+            }
+            table.A td
+            {   
+                border:double black;
+                margin:1px;
+                background-color: white; 
+            }
+            table.A td:hover
+            {
+                font-weight:bold;
+                background:yellow;
+                
+            }
+            table.A tr:hover td
+            {
+                font-weight:bold;
+                background:pink;
+            }
+            table.A:hover td:nth-child(1)
+            {
+                font-weight:bold;
+                background:pink;
+            }
+            /*
+                a) po dodaniu <style>td:hover {font-weight:bold;background:yellow}</style>
+                jeśli najdedziemy na daną komórke tablie zmieni sie jej kolor na żółty i napis w niej jest pogrubiony
+                b)by po najechaniu myszką podświetlał się cały wiersz tabeli należy wpisaćtable.A tr:hover td{font-weight:bold;
+                background:pink;}
+                c)Nie jest możliwe znanymi mi metodami podkreślenie całej kolumny
+                d)należy sie odwołac do klasy tabeli table.A
+            */
+        </style>
+        
+    </head>
+    <body>
+        <table class="A">
+            <tr><th>Imie</th><th>Wiek</th><th>Stan konta</th></tr>
+            <tr><td>Janusz</td><td>42</td><td>3000</td></tr>
+            <tr><td>Marek</td><td>51</td><td>6000</td></tr>
+            <tr><td>Ania</td><td>18</td><td>500</td></tr>
+            <tr><td colspan=2>Łączny stan konta</td><td>9500</td></tr>
+            
+        </table>
+    </body>
+</html>

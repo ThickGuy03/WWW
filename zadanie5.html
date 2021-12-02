@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            table.A
+            {
+                border:solid black;
+                padding:1px;
+                background-color: white;
+            }
+            table.A th
+            {
+                border:double black;
+                margin:1px;
+                background-color: white;
+            }
+            table.A td
+            {
+                border:double black;
+                margin:1px;
+                background-color: white;
+            
+            }
+            table.B
+            {
+                border:solid black;
+                padding:1px;
+                background-color: white;
+            }
+            table.B td
+            {
+                border:double black;
+                margin:1px;
+                background-color: white;
+            
+            }
+            table.B th
+            {
+                border:double black;
+                margin:1px;
+                background-color: white;
+            }
+         
+        </style>
+    </head>
+    <body>
+        <table class="A">
+            <tr><th>Imie</th><th>Wiek</th><th>Stan konta</th></tr>
+            <tr><td>Janusz</td><td>42</td><td>3000</td></tr>
+            <tr><td>Marek</td><td>51</td><td>6000</td></tr>
+            <tr><td>Ania</td><td>18</td><td>500</td></tr>
+            <tr><td colspan=2>Łączny stan kont</td><td>9500</td></tr>
+        <table class="B">
+                <tr><th>Imie</th><th>Wiek</th><th>Stan konta</th></tr>
+                <tr><td>Kamil</td><td>32</td><td>4000</td></tr>
+                <tr><td>Ola</td><td>15</td><td rowspan=2>brak danych</td></tr>
+                <tr><td>Maciek</td><td>17</td></tr>
+                <tr><td colspan=2>Łączny stan kont</td><td>4000</td></tr>
+            
+        </table>
+    </body>
+</html>

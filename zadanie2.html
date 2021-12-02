@@ -1,60 +1,12 @@
-<!Doctype html>
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<style>
-  td{ font-size: 16px; color:green; font-family: cursive;}
-</style>
 </head>
 <body>
-    <button onclick="wypiszA(imiona)">ImionaA</button>
-    <button onclick="wypiszA(liczby)">LiczbyA</button>
-    <button onclick="wypiszB(imiona)">ImionaB</button>
-    <button onclick="wypiszB(liczby)">LiczbyB</button>
-    <button onclick="wypiszC(imiona)">ImionaC</button>
-    <button onclick="wypiszC(liczby)">LiczbyC</button>
-    <button onclick="wypiszD(imiona)">ImionaD</button>
-    <button onclick="wypiszD(liczby)">LiczbyD</button>
-    <script>
-    var imiona=["ola","ala","Ela"];
-    var liczby=[2,3,5,7,10,12,23];
-    function wypiszA(tab)
-    {
-        var ramka=document.getElementById('ramka');
-        s='';
-        for(let x of tab)
-        s+=x+' ';
-        ramka.innerHTML=s;
-    }
-    function wypiszB(tab)
-    {
-        var ramka=document.getElementById('ramka');
-        s='';
-        for(let x of tab)
-        s+="<ul><li>"+x+"</li></ul>";
-        ramka.innerHTML=s;
-    }
-    function wypiszC(tab)
-    {
-        var ramka=document.getElementById('ramka');
-        s='';
-        for(let x of tab)
-        {   
-            "<td>";
-            s+=x;
-            "</td>";
-            ramka.innerHTML=s;
-        }
-    }
-    function wypiszD(tab)
-    {
-        var ramka=document.getElementById('ramka');
-        s='';
-        for(let x of tab)
-        s+="<tr>"+x+"</tr>"+' ';
-        ramka.innerHTML=s;
-    }
-    </script>
-    <div id="ramka"></div>
-</body>
-</html>
+<button style="position: relative;color:pink;" onclick="document.body.style.background=this.innerHTML">pink</button>
+<button style="position: relative; color:green;" onclick="document.body.style.background=this.innerHTML">green</button>
+<button style="position: relative; color:red;" onclick="document.body.style.background=this.innerHTML">red</button>
+<p></p>
+
+</body></html>
