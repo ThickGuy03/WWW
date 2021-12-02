@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        p:nth-child(5n){
+            color: orange;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>un</p>
+    <p>deux</p>
+    <p>trois</p>
+    <p>quatre</p>
+    <p>cinq</p>
+    <p>six</p>
+    <p>sept</p>
+    <p>huit</p>
+    <p>neuf</p>
+    <p>dix</p>
+    <p>onze</p>
+    <p>douze</p>
+    <p>treize</p>
+    <p>quatorze</p>
+    <p>quinze</p>
+    <button onclick="_return()">OK</button>
+    <button onclick="every3rd()">Co trzeci paragraf tło fioletowe, tekst biały</button>
+    <button onclick="add()">Dodaj 15 element od końca</button>
+    <button onclick="add2()">Dodaj paragraf wskazujący numer paragrafu</button>
+    <div id="add"></div>
+
+    <script>
+        function _return(){
+            let tag = document.querySelectorAll('p');
+            for (let i = 0; i<tag.length; i++){
+                tag[i].style.color = "black";
+                tag[i].style.background = "white";
+            }
+        }
+        function every3rd(){
+            let tag = document.querySelectorAll('p');
+            for (let i = 2; i<tag.length; i+=3){
+                tag[i].style.color = "white";
+                tag[i].style.background = "purple";
+            }
+        }
+        function add(){
+            let tag = document.querySelectorAll('p');
+            let length = tag.length;
+            document.getElementById("add").innerHTML += "<p>"+tag[length-15].innerHTML+"</p>";
+        }
+        function add2(){
+            let tag = document.querySelectorAll('p');
+            let length = tag.length;
+            let number = 0;
+            for (let i = 0; i<=tag.length; i++){
+                number++;
+            }
+            document.getElementById("add").innerHTML += "<p>Numer tego paragrafu to: "+number+"</p>";
+        }
+    </script>
+</body>
+
+</html>

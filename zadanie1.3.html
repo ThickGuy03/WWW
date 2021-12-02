@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    p {
+        border:solid green;
+        background-color: lightpink;
+    }
+</style>
+</head>
+<body>
+<p id=paragraph onclick="wypisz()">Jeszcze nie kliknięty</p>
+<script>
+    x=1;
+    function wypisz()
+    {
+        
+        document.getElementById('paragraph').innerHTML="Kliknięto po raz " + x;
+        onclick=x++;
+    }
+</script>
+</body>
+</html>
